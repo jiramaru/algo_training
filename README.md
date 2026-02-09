@@ -50,6 +50,9 @@ You can specify which programming languages you want to use. Supported languages
 - `go` - Go
 - `rust` - Rust
 - `dart` - Dart
+- `php` - PHP
+- `csharp` - C#
+- `ts` - TypeScript
 
 To create directories for specific languages:
 
@@ -106,14 +109,40 @@ After creating the structure, add your solution files for each problem you solve
 
 You can then add your solution files inside this directory.
 
-## Pushing Your Changes
+## Commit Your Changes
 After adding your solutions, commit and push your changes to your forked repository:
 ```bash
 git add .
 git commit -m "Add solutions for p-01-conditions by your_name"
-git push origin your_name
-# Example: git push origin deo-bata
+# Example: git commit -m "Add solutions for p-01-conditions by deo-bata"
 ```
+
+### Merge to Main and Push
+Switch to the main branch, merge your solution branch, and push to your forked repository:
+
+```bash
+git checkout main
+git merge your_name
+# Example: git checkout main && git merge deo-bata
+```
+
+Push the merged changes to your forked repository:
+```bash
+git push origin main
+```
+
+### Create a Pull Request
+To contribute your solutions back to the main repository:
+
+1. Go to the original repository on GitHub
+2. Click on the "Pull Requests" tab
+3. Click "New Pull Request"
+4. Select your forked repository and your `main` branch as the source
+5. Select the original repository's `main` branch as the destination
+6. Add a descriptive title and description for your pull request
+7. Click "Create Pull Request"
+
+Your pull request will be reviewed, and if everything looks good, it will be merged into the main repository!
 
 -----------
 

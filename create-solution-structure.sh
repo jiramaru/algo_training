@@ -2,7 +2,7 @@
 
 # Script to create directory structure for DSA solutions
 # Usage: bash create-solution-structure.sh <student_name> [language1 language2 ...]
-# Supported languages: python, js, c, cpp, java, go, rust, dart
+# Supported languages: python, js, c, cpp, java, go, rust, dart, php, csharp, ts
 # Default languages (if none specified): python, js, c, cpp
 
 if [ -z "$1" ]; then
@@ -14,7 +14,7 @@ if [ -z "$1" ]; then
     echo "Example with specific languages:"
     echo "  bash create-solution-structure.sh deo-bata python js"
     echo ""
-    echo "Supported languages: python, js, c, cpp, java, go, rust, dart"
+    echo "Supported languages: python, js, c, cpp, java, go, rust, dart, php, csharp, ts"
     exit 1
 fi
 
@@ -22,7 +22,7 @@ STUDENT_NAME=$1
 shift  # Remove first argument, remaining are languages
 
 # Supported languages
-SUPPORTED_LANGUAGES=("python" "js" "c" "cpp" "java" "go" "rust" "dart")
+SUPPORTED_LANGUAGES=("python" "js" "c" "cpp" "java" "go" "rust" "dart" "php" "csharp" "ts")
 
 # Default languages if none specified
 if [ $# -eq 0 ]; then
